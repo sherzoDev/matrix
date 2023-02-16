@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import Logo from "../../assets/images/site-logo.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
+import heroBtn from "../../assets/images/menu.svg";
+import heroCloseBtn from "../../assets/images/close-btn.svg";
 
 const Header = () => {
+  const [burgerState, setBurgerState] = useState(false);
+  const onclickBtn = () => {
+    setBurgerState(!burgerState);
+  };
+
   return (
     <div className="bg">
       <header className="header">
@@ -12,7 +19,7 @@ const Header = () => {
             <a href="/" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
-            <ul className="nav__list">
+            <ul className={`nav__list ${burgerState ? "on" : ""}`}>
               <li className="nav__item">
                 <a href="/" className="nav__link">
                   kurs haqida
@@ -34,6 +41,18 @@ const Header = () => {
                 </a>
               </li>
             </ul>
+            <button onClick={onclickBtn} className="menu-btn" type="button">
+              {burgerState ? (
+                <img
+                  src={heroCloseBtn}
+                  alt="............"
+                  width="24"
+                  height="24"
+                />
+              ) : (
+                <img src={heroBtn} alt="............" width="24" height="24" />
+              )}
+            </button>
           </nav>
         </div>
       </header>
@@ -58,8 +77,10 @@ const Header = () => {
                 kursga yozilish
               </a>
               <div className="hero__btns-group">
-                <a className="hero__btns-about" href="/">batafsil</a>
-                <img src={heroRight} alt="" />
+                <a className="hero__btns-about" href="/">
+                  batafsil
+                </a>
+                <img src={heroRight} alt="..........................." />
               </div>
             </div>
           </div>
