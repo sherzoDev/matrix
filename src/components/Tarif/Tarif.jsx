@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Tarif.scss";
 
 const Tarif = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [isGreen, setIsGreen] = useState(false);
+
+  const [isBlack, setIsBlack] = useState(false);
+
   return (
     <div className="tarif">
       <div className="container">
@@ -39,6 +45,221 @@ const Tarif = () => {
               Maxsus taklif 24 soat amal qiladi!
             </p>
           </div>
+          <ul className="tarif-card-list">
+            <li className="tarif-card-item">
+              <div className="tr-card-wrap">
+                <div className="card-text-box">
+                  <div className="top-t-box">
+                    <strong className="card-tarif-title">Junior</strong>
+                    <span className="card-tarif">tarif</span>
+                  </div>
+                  <div className="bottom-t-box">
+                    <h3 className="card-price">990 000</h3>
+                    <span className="card-cost">so'm</span>
+                  </div>
+                  <div className="card-btn-wrap">
+                    <p className="card-text">Asl narx 1 200 000 so’m</p>
+                    <button
+                      className="card-open-btn"
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Batafsil
+                    </button>
+                  </div>
+                </div>
+                {isOpen && (
+                  <div className="">
+                    <div className="open-box">
+                      <ul className="card-info-list">
+                        <li className="card-info-item">
+                          Kurs davomiyligi - 4 oy
+                        </li>
+                        <li className="card-info-item">3 ta modul asosida</li>
+                        <li className="card-info-item">48 ta dars</li>
+                        <li className="card-info-item">
+                          Uyga vazifalar sistemasi
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunida Sertifikat
+                        </li>
+                        <li className="card-info-item">
+                          Treninglarga bilet 20% chegirmada
+                        </li>
+                        <li className="card-info-item">Umumiy Telegram chat</li>
+                        <li className="card-info-item">Kursga kirish: 3 oy</li>
+                      </ul>
+                    </div>
+                    <div className="card-black-box">
+                      <p>
+                        Joy qoldi: <span>300</span>dan <span>75</span>
+                      </p>
+                      <button className="card-info-btn">
+                        kursga yozilaman
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </li>
+            <li className="tarif-card-item">
+              <div className="tr-card-wrap">
+                <div className="card-text-box">
+                  <div className="top-t-box">
+                    <strong className="card-tarif-title">Middle</strong>
+                    <span className="card-tarif">tarif</span>
+                  </div>
+                  <div className="bottom-t-box">
+                    <h3 className="card-price">2 430 000</h3>
+                    <span className="card-cost">so'm</span>
+                  </div>
+                  <div className="card-btn-wrap">
+                    <p className="card-text">
+                      Asl narx <del>2 700 000 so’m</del>
+                    </p>
+                    <button
+                      className="card-open-btn"
+                      onClick={() => setIsGreen(!isGreen)}
+                    >
+                      Batafsil
+                    </button>
+                  </div>
+                </div>
+                
+                {isGreen && (
+                  <div className="">
+                    <div className="open-box">
+                      <ul className="card-info-list">
+                        <li className="card-info-item">
+                          Kurs davomiyligi - 4 oy
+                        </li>
+                        <li className="card-info-item">3 ta modul asosida</li>
+                        <li className="card-info-item">48 ta dars</li>
+                        <li className="card-info-item">
+                          Uyga vazifalar sistemasi
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunida Sertifikat
+                        </li>
+                        <li className="card-info-item">
+                          Treninglarga bilet 50% chegirmada
+                        </li>
+                        <li className="card-info-item">Umumiy Telegram chat</li>
+                        <li className="card-info-item">Kursga kirish: 6 oy</li>
+                        <li className="card-info-item">16 ta ONLINE dars</li>
+                        <li className="card-info-item">
+                          Kurator biriktiriladi
+                        </li>
+                        <li className="card-info-item">
+                          Kompaniya tomonidan uyushtrilgan konkurslarga
+                          qatnashish imkoni
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunida O'quvchini yo'naltriladi
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="card-black-box">
+                      <p>
+                        Joy qoldi: <span>200</span>dan <span>35</span>
+                      </p>
+                      <button className="card-info-btn">
+                        kursga yozilaman
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <span className="card-sale">-10%</span>
+            </li>
+            <li className="tarif-card-item">
+              <div className="tr-card-wrap">
+                <div className="card-text-box">
+                  <div className="top-t-box">
+                    <strong className="card-tarif-title">Senior</strong>
+                    <span className="card-tarif">tarif</span>
+                  </div>
+                  <div className="bottom-t-box">
+                    <h3 className="card-price">3 825 000</h3>
+                    <span className="card-cost">so'm</span>
+                  </div>
+                  <div className="card-btn-wrap">
+                    <p className="card-text">
+                      Asl narx <del>4 00 000 so’m</del>
+                    </p>
+                    <button
+                      className="card-open-btn"
+                      onClick={() => setIsBlack(!isBlack)}
+                    >
+                      Batafsil
+                    </button>
+                  </div>
+                </div>
+                {isBlack && (
+                  <div className="">
+                    <div className="open-box">
+                      <ul className="card-info-list">
+                        <li className="card-info-item">
+                          Kurs davomiyligi - 4 oy
+                        </li>
+                        <li className="card-info-item">3 ta modul asosida</li>
+                        <li className="card-info-item">48 ta dars</li>
+                        <li className="card-info-item">
+                          Uyga vazifalar sistemasi
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunida Sertifikat
+                        </li>
+                        <li className="card-info-item">
+                          Treninglarga bilet 20% chegirmada
+                        </li>
+                        <li className="card-info-item">Umumiy Telegram chat</li>
+                        <li className="card-info-item">Kursga kirish: 3 oy</li>
+                        <li className="card-info-item">16 ta ONLINE dars</li>
+                        <li className="card-info-item">
+                          Kurator biriktiriladi
+                        </li>
+                        <li className="card-info-item">
+                          Kompaniya tomonidan uyushtrilgan konkurslarga
+                          qatnashish imkoni
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunida O'quvchini yo'naltriladi
+                        </li>
+                        <li className="card-info-item">
+                          Qiymati 990 000 so'mlik Ingliz tili 3 Oylik Online
+                          kursda o'qish imkoni
+                        </li>
+                        <li className="card-info-item">
+                          Kurs yakunidan so’ng kompaniyada Stajirovka sifatida
+                          ishlash
+                        </li>
+                        <li className="card-info-item">
+                          Stajirovkadan so'ng ishga kirish imkoni
+                        </li>
+                        <li className="card-info-item">
+                          Freelancer Sifatida Pul topish uchun kerakli barcha
+                          keyslar
+                        </li>
+                        <li className="card-info-item">
+                          Boshqa kurslarga 20%lik chegirmali Vaucher
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="card-black-box">
+                      <p>
+                        Joy qoldi: <span>300</span>dan <span>75</span>
+                      </p>
+                      <button className="card-info-btn">
+                        kursga yozilaman
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <span className="card-sale-green">-15%</span>
+            </li>
+          </ul>
+          <div></div>
         </div>
       </div>
     </div>
