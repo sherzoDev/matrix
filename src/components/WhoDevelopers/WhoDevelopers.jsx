@@ -46,10 +46,10 @@ const WhoDevelopers = () => {
                 </p>
               </li>
             </ul>
-              <div className="whodevelopers-btn">
-                <a href="/">IT mutaxassikni egallash</a>
-                <img src={heroRight} alt=". . . . " />
-              </div>
+            <div className="whodevelopers-btn">
+              <a href="/">IT mutaxassikni egallash</a>
+              <img src={heroRight} alt=". . . . " />
+            </div>
           </div>
         </div>
       </section>
