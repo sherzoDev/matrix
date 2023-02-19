@@ -20,9 +20,9 @@ function App() {
       <Courses />
       <Learn />
       <Result />
-      {/* <Tarif />
+      <Tarif />
       <Info />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

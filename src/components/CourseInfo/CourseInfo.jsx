@@ -92,7 +92,7 @@ function CourseInfo() {
             </div>
           </div>
           <div className="whodevelopers-btn">
-            <a href="/">kursga qatnashmoqchiman</a>
+            <a href="#">kursga qatnashmoqchiman</a>
             <img src={heroRight} alt=". . . . " />
           </div>
         </div>

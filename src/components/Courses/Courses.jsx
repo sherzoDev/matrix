@@ -42,7 +42,7 @@ const Courses = () => {
             <div>
               <div className="lessons__main">
                 <div className="lessons__main-link">
-                  <a className="lessons__main-btn" href="/">
+                  <a className="lessons__main-btn" href="#">
                     Kurs afzalliklari
                   </a>
                 </div>
@@ -116,7 +116,7 @@ const Courses = () => {
             </div>
 
             <div className="whodevelopers-btn">
-              <a href="/">darxol kursga yozilaman</a>
+              <a href="#">darxol kursga yozilaman</a>
               <img src={heroRight} alt=". . . . " />
             </div>
           </div>

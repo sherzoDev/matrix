@@ -137,6 +137,8 @@
 
 .lessons__main {
   padding-left: 63px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   padding-right: 118px;
   margin-top: 79px;
   max-width: 1290px;
@@ -286,5 +288,14 @@
 
   .lessons__head {
     margin-bottom: 73px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .courses-list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
