@@ -6,6 +6,7 @@ import Info from "./components/Info/Info";
 import Tarif from "./components/Tarif/Tarif";
 import WhoDevelopers from "./components/WhoDevelopers/WhoDevelopers";
 import CourseInfo from "./components/CourseInfo/CourseInfo";
+import Students from "./components/Students/Students";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
       <Header />
       <CourseAbout /> 
+      <Students />
       <Tarif />
       <Info />
       <Footer />
