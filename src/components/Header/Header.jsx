@@ -16,27 +16,27 @@ const Header = () => {
       <header className="header">
         <div className="container">
           <nav className="nav">
-            <a href="/" className="header__logo">
+            <a href="#" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
             <ul className={`nav__list ${burgerState ? "on" : ""}`}>
               <li className="nav__item">
-                <a href="/" className="nav__link">
+                <a href="#" className="nav__link">
                   kurs haqida
                 </a>
               </li>
               <li className="nav__item">
-                <a href="/" className="nav__link">
+                <a href="#" className="nav__link">
                   IT-mutaxassis kim?
                 </a>
               </li>
               <li className="nav__item">
-                <a href="/" className="nav__link">
+                <a href="#" className="nav__link">
                   tariflar
                 </a>
               </li>
               <li className="nav__item">
-                <a href="/" className="nav__link">
+                <a href="#" className="nav__link">
                   FAQ
                 </a>
               </li>
@@ -73,11 +73,11 @@ const Header = () => {
               </p>
             </div>
             <div className="hero__btns">
-              <a href="/" className="hero__btn">
+              <a href="#" className="hero__btn">
                 kursga yozilish
               </a>
               <div className="hero__btns-group">
-                <a className="hero__btns-about" href="/">
+                <a className="hero__btns-about" href="#">
                   batafsil
                 </a>
                 <img src={heroRight} alt="..........................." />
