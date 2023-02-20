@@ -11,17 +11,9 @@ import Courses from "./components/Courses/Courses";
 import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 
-
 function App() {
   return (
     <div className="app">
-
-      <Header />
-      <CourseAbout /> 
-      <Students />
-      <Tarif />
-      <Info />
-      <Footer />
       <Header />
       <CourseAbout />
       <WhoDevelopers />
@@ -29,6 +21,7 @@ function App() {
       <Courses />
       <Learn />
       <Result />
+      <Students />
       <Tarif />
       <Info />
       <Footer />
