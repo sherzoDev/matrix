@@ -43,7 +43,7 @@ const Header = () => {
             <h1 className="hero__title">Atigi 4 oyda SIZ</h1>
             <p className="hero__desc">
               <span className="hero__desc-bold">Foundation </span> kursiga
-              qatnashib Mentor O'qituvchi bilan NOLdan dasturlash asoslarini
+              qatnashib Mentor O'qituvchi ko'magida NOLdan dasturlash asoslarini
               o'rganing va IT mutaxassislik darajasiga ko'tariling
             </p>
             <div className="hero__badge">
