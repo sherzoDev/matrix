@@ -1,6 +1,6 @@
 import React from "react";
 import "./CourseAbout.scss";
-import heroRight from "../../assets/images/hero__arrow.svg";
+import heroRight from "../../assets/images/about-arrow.svg";
 
 const Hero = () => {
   return (
