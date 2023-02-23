@@ -12,7 +12,21 @@ function CourseInfo() {
           <div className="datail-summ-box">
             <div className="details-left">
               <details className="details">
-                  <summary className="details-title">Yoshlar uchun</summary>
+                <summary className="details-title">
+                  <p className="tt">Yoshlar uchun</p> 
+                </summary>
+                <summary className="details-text">
+                  <p className="tt">
+                    Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng
+                    siz maktabimizdan Albatta tugatganligingiz haqida Sertifikat
+                    olasiz.
+                  </p>
+                </summary>
+              </details>
+              <details className="details">
+                <summary className="details-title">
+                  <p className="tt">Ko'p daromad olishni istaganlar uchun</p>
+                </summary>
                 <summary className="details-text">
                   Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
                   maktabimizdan Albatta tugatganligingiz haqida Sertifikat
@@ -21,7 +35,7 @@ function CourseInfo() {
               </details>
               <details className="details">
                 <summary className="details-title">
-                  Ko'p daromad olishni istaganlar uchun
+                  <p className="tt">Rivojlanishni istaganlar uchun</p>
                 </summary>
                 <summary className="details-text">
                   Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
@@ -31,17 +45,7 @@ function CourseInfo() {
               </details>
               <details className="details">
                 <summary className="details-title">
-                  Rivojlanishni istaganlar uchun
-                </summary>
-                <summary className="details-text">
-                  Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
-                  maktabimizdan Albatta tugatganligingiz haqida Sertifikat
-                  olasiz.
-                </summary>
-              </details>
-              <details className="details">
-                <summary className="details-title">
-                  Boshlang'ich dasturchilar uchun
+                  <p className="tt">Boshlang'ich dasturchilar uchun</p>
                 </summary>
                 <summary className="details-text">
                   Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
@@ -52,26 +56,8 @@ function CourseInfo() {
             </div>
             <div className="details-right">
               <details className="details">
-                <summary className="details-title">Texnologlar uchun</summary>
-                <summary className="details-text">
-                  Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
-                  maktabimizdan Albatta tugatganligingiz haqida Sertifikat
-                  olasiz.
-                </summary>
-              </details>
-              <details className="details">
                 <summary className="details-title">
-                  Kelajak haqida o'ylaydigan har bir kishi uchun
-                </summary>
-                <summary className="details-text">
-                  Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
-                  maktabimizdan Albatta tugatganligingiz haqida Sertifikat
-                  olasiz.
-                </summary>
-              </details>
-              <details className="details">
-                <summary className="details-title">
-                  IT Dasturchi boʻlishga qaror qilganlar uchun
+                  <p className="tt">Texnologlar uchun</p>
                 </summary>
                 <summary className="details-text">
                   Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
@@ -81,7 +67,33 @@ function CourseInfo() {
               </details>
               <details className="details">
                 <summary className="details-title">
-                  IT yo’nalishi bilan tanishmoqchi bo’lganlar uchun
+                  <p className="tt">
+                    Kelajak haqida o'ylaydigan har bir kishi uchun
+                  </p>
+                </summary>
+                <summary className="details-text">
+                  Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
+                  maktabimizdan Albatta tugatganligingiz haqida Sertifikat
+                  olasiz.
+                </summary>
+              </details>
+              <details className="details">
+                <summary className="details-title">
+                  <p className="tt">
+                    IT Dasturchi boʻlishga qaror qilganlar uchun
+                  </p>
+                </summary>
+                <summary className="details-text">
+                  Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
+                  maktabimizdan Albatta tugatganligingiz haqida Sertifikat
+                  olasiz.
+                </summary>
+              </details>
+              <details className="details">
+                <summary className="details-title">
+                  <p className="tt">
+                    IT yo’nalishi bilan tanishmoqchi bo’lganlar uchun
+                  </p>
                 </summary>
                 <summary className="details-text">
                   Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
