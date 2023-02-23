@@ -76,7 +76,7 @@ const Header = () => {
               <a href="#" className="hero__btn">
                 kursga yozilish
               </a>
-              <div className="hero__btns-group">
+              <div className="hero__btns-group heroRightImg">
                 <a className="hero__btns-about" href="#">
                   batafsil
                 </a>
