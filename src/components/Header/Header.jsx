@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
 import Logo from "../../assets/images/site-logo.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
-import heroBtn from "../../assets/images/menu.svg";
-import heroCloseBtn from "../../assets/images/close-btn.svg";
 
 const Header = () => {
-  const [burgerState, setBurgerState] = useState(false);
-  const onclickBtn = () => {
-    setBurgerState(!burgerState);
-  };
-
   return (
     <div className="bg">
       <header className="header">
@@ -19,7 +12,7 @@ const Header = () => {
             <a href="#" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
-            <ul className={`nav__list ${burgerState ? "on" : ""}`}>
+            <ul className="nav__list">
               <li className="nav__item">
                 <a href="#" className="nav__link">
                   kurs haqida
@@ -41,18 +34,6 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <button onClick={onclickBtn} className="menu-btn" type="button">
-              {burgerState ? (
-                <img
-                  src={heroCloseBtn}
-                  alt="............"
-                  width="24"
-                  height="24"
-                />
-              ) : (
-                <img src={heroBtn} alt="............" width="24" height="24" />
-              )}
-            </button>
           </nav>
         </div>
       </header>
@@ -61,10 +42,9 @@ const Header = () => {
           <div className="hero__wrapper">
             <h1 className="hero__title">Atigi 4 oyda SIZ</h1>
             <p className="hero__desc">
-              <span className="hero__desc-bold">Foundation</span> kursiga
-              qatnashib kuratorlar va murabbiylar bilan bir jamoada <br />{" "}
-              NOLdan Dasturlash asoslarini o’rganasiz va IT mutaxassislik
-              darajasiga ko’tarila boshlang
+              <span className="hero__desc-bold">Foundation </span> kursiga
+              qatnashib mentor oqituvchi bilan noldan dasturlash asoslarini
+              o'rganing va it mutaxasislik darajasiga ko'tariling
             </p>
             <div className="hero__badge">
               <p className="hero__badge-desc">

@@ -93,6 +93,31 @@ body {
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 379px) {
+  .hero__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero__btn {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 200000000000px) {
+  .hero__btns {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .hero__btns-group {
+    margin-left: 19px;
+  }
+}
+
 .hero__title {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
@@ -159,11 +184,6 @@ body {
   color: #01f573;
 }
 
-.hero__btns {
-  display: flex;
-  align-items: center;
-}
-
 .hero__btns-group {
   display: flex;
   align-items: center;
@@ -176,7 +196,7 @@ body {
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
   .bg {
-    padding-top: 17px;
+    padding-top: 30px;
     padding-bottom: 84px;
   }
 
@@ -194,10 +214,6 @@ body {
     line-height: 39px;
     background: linear-gradient(90.67deg, #08CB63 29.84%, #00FF76 107.54%);
     background-clip: text;
-  }
-
-  .heroRightImg {
-    margin-left: 20px;
   }
 
   .hero__desc {
@@ -219,21 +235,12 @@ body {
     line-height: 26px;
   }
 
-  .hero__btns {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-
-  }
-
   .hero__btn {
     font-size: 18px;
     width: 176px;
     height: 51px;
     background: #01F573;
     border-radius: 28px;
-    margin-top: 30px;
-    margin-bottom: 30px;
   }
 
   .hero__btns-about {
