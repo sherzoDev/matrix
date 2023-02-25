@@ -57,7 +57,7 @@ const Header = () => {
                 kursga yozilish
               </a>
               <div className="hero__btns-group heroRightImg">
-                <a className="hero__btns-about" href="#">
+                <a className="hero__btns-about" href="#tarif">
                   batafsil
                 </a>
                 <img src={heroRight} alt="..........................." />

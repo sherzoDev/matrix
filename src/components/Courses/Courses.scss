@@ -8,6 +8,12 @@
 .courses-item {
   display: flex;
   align-items: center;
+  margin-top: 20px;
+}
+
+.courses-icons {
+  width: 70px;
+  height: 78px;
 }
 
 .courses-title {
@@ -40,9 +46,13 @@
 
 .courses-list-text {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 37px;
   color: #FFFFFF;
+}
+
+.courses-list {
+  margin-top: 50px;
 }
 
 .lessons__main-list {
@@ -120,24 +130,12 @@
   margin-bottom: 25px;
 }
 
-.lessons__main-item-lisr::before {
-  background-image: url("../../assets/images/practical-knowledge.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
-  display: inline-block;
-  width: 189px;
-  height: 106px;
-  margin-bottom: 25px;
-}
-
 .lessons__main-list {
   margin-top: 33px;
 }
 
 .lessons__main {
   padding-left: 63px;
-  padding-top: 80px;
   padding-bottom: 80px;
   padding-right: 118px;
   margin-top: 79px;
@@ -147,8 +145,23 @@
   border: 1px solid #ddd;
 }
 
+.lessons__mains {
+  padding: 80px 39px;
+  margin-top: 79px;
+  max-width: 1290px;
+  width: 100%;
+  border-radius: 41px;
+  border: 1px solid #ddd;
+}
+
 .lessons__main-link {
-  margin-bottom: 83px;
+  margin-bottom: 67px;
+}
+
+.lessons__main-btn {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
 }
 
 .lessons__main-strong {
@@ -293,4 +306,15 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.lessons__main-item-lisr::before {
+  background-image: url("../../assets/images/practical-knowledge.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  display: inline-block;
+  width: 189px;
+  height: 106px;
+  margin-bottom: 25px;
 }
