@@ -33,6 +33,10 @@ body {
   padding-bottom: 70px;
 }
 
+.hero__btn {
+  border: none;
+}
+
 .nav__link {
   color: #fff;
   text-transform: capitalize;
@@ -170,7 +174,6 @@ body {
   font-size: 25px;
   line-height: 30px;
   text-align: center;
-  padding-top: 11px;
   color: #000000;
 }
 
