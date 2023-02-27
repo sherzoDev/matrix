@@ -1,5 +1,5 @@
 .tarif {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .tarif-wrap {
 }
@@ -294,6 +294,9 @@
   }
 }
 @media only screen and (min-width: 650px) {
+  .tarif{
+    margin-top: 150px;
+  }
   .tarif-list {
     display: flex;
     justify-content: space-around;
@@ -306,6 +309,7 @@
   }
 }
 @media only screen and (min-width: 1000px) {
+
   .tarif-title {
     font-size: 80px;
     line-height: 98px;
