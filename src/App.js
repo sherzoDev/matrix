@@ -11,29 +11,18 @@ import Courses from "./components/Courses/Courses";
 import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
+import { Route, Routes } from "react-router-dom";
 
-
+import {About} from "./pages/About/About";
+import { Home } from "./pages/Home/Home";
 function App() {
   return (
     <div className="app">
-
-
-      <Header />
-      <CourseAbout /> 
-      <Students />
-      <Tarif />
-      <Info />
-      <Footer />
-      <Header />
-      <CourseAbout />
-      <WhoDevelopers />
-      <CourseInfo />
-      <Courses />
-      <Learn />
-      <Result />
-      <Tarif />
-      <Info />
-      <Footer />
+<Routes>
+  <Route path="/*" element={ <Home/> } />
+  <Route path="/about*" element={ <About />  } />
+</Routes>
+      
       <IdleTimerContainer>
     </IdleTimerContainer>
     </div>

@@ -4,7 +4,7 @@ import Logo from "../../assets/images/site-logo.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
 import heroBtn from "../../assets/images/menu.svg";
 import heroCloseBtn from "../../assets/images/close-btn.svg";
-
+import {Link} from "react-router-dom"
 const Header = () => {
   const [burgerState, setBurgerState] = useState(false);
   const onclickBtn = () => {
@@ -18,6 +18,9 @@ const Header = () => {
       <header className="header">
         <div className="container">
           <nav className="nav">
+            <Link to="/about" >
+              About
+            </Link>
             <a href="#" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
