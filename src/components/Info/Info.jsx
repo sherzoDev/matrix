@@ -15,36 +15,38 @@ const Info = () => {
           </div>
           <ul className="info-list">
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
-                  Kurs uchun to’lovni qanday amalga oshiraman
+                  Kurs uchun to’lovni qanday amalga oshiraman ?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
-              <p className="info-item-text">
+              </summary>
+                <p className="info-item-text">
                 Istalgan to’lov turi orqali to’lovni amalga oshirib kursda
                 o’qishingiz mumkin <br /> Hammasi juda oddiy va qulaydir!
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Kursni boshlash uchun qanday ko'nikmalar kerak?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Biz siz bilan butunlay noldan boshlab ishlaymiz sizda kerakli
                 ko’nikmalar <br /> shart emas
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Men oldin IT sohasida bo’lmaganman meni qo’limdan keladimi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Hammasi sizga va vaqtingizni qanday tashkil qilishingizga
                 bog'liq, <br /> bir necha yuz talaba allaqachon bizda o'qitilgan va
@@ -52,38 +54,42 @@ const Info = () => {
                 kerak, <br /> dam olish kunlarida dam olishingiz yoki ish kunlarida <br />
                 bajarishga vaqtingiz bo'lmagan vazifalarni bajarishingiz mumkin.
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Kursdan keyin pul ishlashni boshlaymanmi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Biz sizga boshlang’ich IT-mutaxassislik uchun kerak bo'lgan
                 hamma narsani beramiz, <br /> lekin barchasi sizga bog'liq{" "}
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Men kurs yakunida sertifikat olamanmi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Kursni tugatib, yakuniy ishni himoya qilganingizdan so'ng siz
                 maktabimizdan <br /> Albatta tugatganligingiz haqida Sertifikat olasiz.
               </p>
+
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Kuratorlar har bir talabani tekshiradimi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Ha, albatta. Bizda bir nechta tajribali o'qituvchilar,
                 murabbiylar va kurs <br /> mualliflari bor, ular sizning uy
@@ -91,26 +97,28 @@ const Info = () => {
                 o'rganish nuqtai nazaridan bizning kuchli tomonlarimizdan
                 biridir.
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Uy vazifasini tekshirish qancha vaqt oladi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 1-3 ish kuni ichida sizga uy vazifangizning tahlilini olishingiz
                 kafolatlanadi.
               </p>
+              </details>
             </li>
             <li className="info-item">
-              <div className="info-item-wrap">
+              <details>
+              <summary className="info-item-wrap">
                 <strong className="info-item-title">
                   Siz talabalarga ishga joylashishda yordam berasizmi?
                 </strong>
-                <img className="info-img" src={close} alt="" />
-              </div>
+              </summary>
               <p className="info-item-text">
                 Kursda biz sizga o’quvchilarni qanday va qayerdan izlash
                 kerakligini aytamiz. Biz ko’p hollarda <br /> ish beruvchilardan
@@ -119,7 +127,8 @@ const Info = () => {
                 qilamiz va <br /> Matrix IT Academy o’quv maktabida Stajor sifatida ish
                 faoliyat yuritishingiz <br /> mumkin va Sajorlikdan keyin kerakli
                 tartiblardan o’sangiz ishga ham qabul qilamiz
-              </p>
+              </p>  
+              </details>
             </li>
           </ul>
         </div>
