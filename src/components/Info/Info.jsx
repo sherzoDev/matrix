@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Info.scss";
 import close from "../../assets/images/close.svg";
 

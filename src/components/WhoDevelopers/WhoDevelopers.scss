@@ -2,6 +2,7 @@
   background-image: url("../../assets/images/backrgound.svg");
   background-color: #101510;
   padding: 56px 0;
+  padding-top: 70px;
   color: #fff;
 }
 
@@ -14,12 +15,17 @@
   padding: 0;
 }
 
-.whodevelopers-text {
-  color: #797979;
-}
-
 .who-developers-desc {
   color: #fff;
+}
+
+.whodevelopers-text {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.whodevelopers-item {
+  margin-bottom: 40px;
 }
 
 .developer {
@@ -27,6 +33,7 @@
   font-size: 24px;
   line-height: 36px;
   color: #FFFFFF;
+  padding-bottom: 40px;
 }
 
 .whodevelopers-btn {

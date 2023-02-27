@@ -113,7 +113,7 @@ const Result = () => {
               </div>
             </div>
             <div className="whodevelopers-btn">
-              <a href="#">xoziroq kursga yozilaman</a>
+              <a href="#tarif">xoziroq kursga yozilaman</a>
               <img src={heroRight} alt=". . . . " />
             </div>
           </div>

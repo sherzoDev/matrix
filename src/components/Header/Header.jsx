@@ -1,20 +1,76 @@
 import React, { useState } from "react";
 import "./Header.scss";
+import "./modal.scss";
 import Logo from "../../assets/images/site-logo.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
+<<<<<<< HEAD
 import heroBtn from "../../assets/images/menu.svg";
 import heroCloseBtn from "../../assets/images/close-btn.svg";
 import {Link} from "react-router-dom"
+=======
+import CloseModal from "../../assets/images/close.svg";
+
+>>>>>>> a79b3738e3a2bb1b211ea122a7838ae8188f3875
 const Header = () => {
-  const [burgerState, setBurgerState] = useState(false);
-  const onclickBtn = () => {
-    setBurgerState(!burgerState);
+  const [modal, setModal] = useState(false);
+
+  const modalOpen = () => {
+    setModal(!modal);
+  };
+
+  const modalClose = () => {
+    setModal(modal);
   };
 
 
   
   return (
     <div className="bg">
+      <div className="m">
+        <div className="modal-box">
+          <div className="modal">
+            <div className="modal-close-btn">
+              <button onClick={modalClose} type="button">
+                <img className="modal-close" src={CloseModal} alt="" />
+              </button>
+            </div>
+            <div className="modal-wrapper">
+              <div className="modal-top">
+                <p className="modal-item">Kursga yozilish</p>
+              </div>
+              <h3 className="modal-title">Foundation</h3>
+              <h4 className="modal-text">DASTURLASH KURSI</h4>
+              <div className="modal-input-group">
+                <div className="modal-ib">
+                  <input
+                    type="text"
+                    className="modal-int"
+                    placeholder="Ism Familya"
+                  />
+                  <input
+                    type="text"
+                    className="modal-int"
+                    placeholder="Ism Familya"
+                  />
+                </div>
+                <a href="#" className="modal-link">
+                  kursga yozilaman
+                </a>
+              </div>
+              <div className="modal-bottom">
+                <label htmlFor="modal-id">
+                  <input
+                    type="checkbox"
+                    className="modal-check"
+                    id="modal-id"
+                  />
+                  Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <header className="header">
         <div className="container">
           <nav className="nav">
@@ -24,7 +80,7 @@ const Header = () => {
             <a href="#" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
-            <ul className={`nav__list ${burgerState ? "on" : ""}`}>
+            <ul className="nav__list">
               <li className="nav__item">
                 <a href="#" className="nav__link">
                   kurs haqida
@@ -46,18 +102,6 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <button onClick={onclickBtn} className="menu-btn" type="button">
-              {burgerState ? (
-                <img
-                  src={heroCloseBtn}
-                  alt="............"
-                  width="24"
-                  height="24"
-                />
-              ) : (
-                <img src={heroBtn} alt="............" width="24" height="24" />
-              )}
-            </button>
           </nav>
         </div>
       </header>
@@ -66,10 +110,9 @@ const Header = () => {
           <div className="hero__wrapper">
             <h1 className="hero__title">Atigi 4 oyda SIZ</h1>
             <p className="hero__desc">
-              <span className="hero__desc-bold">Foundation</span> kursiga
-              qatnashib kuratorlar va murabbiylar bilan bir jamoada <br />{" "}
-              NOLdan Dasturlash asoslarini o’rganasiz va IT mutaxassislik
-              darajasiga ko’tarila boshlang
+              <span className="hero__desc-bold">Foundation </span> kursiga
+              qatnashib Mentor O'qituvchi ko'magida NOLdan dasturlash asoslarini
+              o'rganing va IT mutaxassislik darajasiga ko'tariling
             </p>
             <div className="hero__badge">
               <p className="hero__badge-desc">
@@ -78,11 +121,15 @@ const Header = () => {
               </p>
             </div>
             <div className="hero__btns">
-              <a href="#" className="hero__btn">
+              <button
+                type="button"
+                onClick={modalOpen}
+                className={`hero__btn ${modal ? "open" : ""}`}
+              >
                 kursga yozilish
-              </a>
-              <div className="hero__btns-group">
-                <a className="hero__btns-about" href="#">
+              </button>
+              <div className="hero__btns-group heroRightImg">
+                <a className="hero__btns-about" href="#tarif">
                   batafsil
                 </a>
                 <img src={heroRight} alt="..........................." />

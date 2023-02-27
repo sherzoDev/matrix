@@ -1,5 +1,6 @@
 import React from "react";
 import "./CourseAbout.scss";
+import heroRight from "../../assets/images/about-arrow.svg";
 
 const Hero = () => {
   return (
@@ -21,8 +22,13 @@ const Hero = () => {
             </p>
             <p className="course-about-text course-about-text-three">
               Foundation Dasturlashning asoslari kursi - mutaxasislikka
-              tayyorlov kursi bo’lib, <br /> IT mutaxassislikka ilk qadam hisoblanadi.
+              tayyorlov kursi bo’lib, <br /> IT mutaxassislikka ilk qadam
+              hisoblanadi.
             </p>
+            <div className="whodevelopers-btn">
+              <a href="#">ilk qadam qo’yish</a>
+              <img src={heroRight} alt=". . . . " />
+            </div>
           </div>
         </div>
       </section>
