@@ -7,7 +7,7 @@
 }
 
 .student-wrapper {
-  padding-top: 153px;
+  padding-top: 53px;
 }
 
 .student-title {
@@ -136,6 +136,9 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .student-wrapper{
+    padding-top: 153px;
+  }
   .student-title {
     font-size: 60px;
     line-height: 73px;

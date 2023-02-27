@@ -116,7 +116,7 @@ const Courses = () => {
             </div>
 
             <div className="whodevelopers-btn">
-              <a href="#">darxol kursga yozilaman</a>
+              <a  href="#">darxol kursga yozilaman</a>
               <img src={heroRight} alt=". . . . " />
             </div>
           </div>
