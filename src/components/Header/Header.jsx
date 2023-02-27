@@ -16,6 +16,8 @@ const Header = () => {
     setModal(modal);
   };
 
+
+  
   return (
     <div className="bg">
       <div className="m">
