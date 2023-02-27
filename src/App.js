@@ -12,31 +12,13 @@ import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
 import { Route, Routes } from "react-router-dom";
-
-<<<<<<< HEAD
-import {About} from "./pages/About/About";
-import { Home } from "./pages/Home/Home";
-function App() {
-  return (
-    <div className="app">
-<Routes>
-  <Route path="/*" element={ <Home/> } />
-  <Route path="/about*" element={ <About />  } />
-</Routes>
       
-=======
+
 function App() {
   return (
     <div className="app">
 
-
-
-      <Header />
-      <CourseAbout /> 
-      <Students />
-      <Tarif />
-      <Info />
-      <Footer />
+    
 
       <Header />
       <CourseAbout />
@@ -49,7 +31,6 @@ function App() {
       <Tarif />
       <Info />
       <Footer />
->>>>>>> a79b3738e3a2bb1b211ea122a7838ae8188f3875
       <IdleTimerContainer>
     </IdleTimerContainer>
     </div>

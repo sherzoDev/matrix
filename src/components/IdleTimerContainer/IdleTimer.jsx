@@ -8,7 +8,7 @@ export const IdleTimerContainer = () => {
     const idleTimerRef = useRef();
     const [modal,setModal] = useState(false);
     return <div>
-    <IdleTimer timeout={10000}  onIdle={() => setModal(true) }  ref={idleTimerRef} >
+    <IdleTimer timeout={5000}  onIdle={() => setModal(true) }  ref={idleTimerRef} >
     <ReactModal onAfterClose={() => setModal(false)} bodyOpenClassName="overflow"    style={ {
         content: {
             top: '50%',
@@ -19,9 +19,7 @@ export const IdleTimerContainer = () => {
             transform: 'translate(-50%, -50%)',
         },
     }} isOpen={modal} onRequestClose={() => setModal(false)}>
-   <Routes>
-  
-</Routes>
+ <h1>modal</h1>
     </ReactModal>
     </IdleTimer>;
     </div>

@@ -1,82 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
-import "./modal.scss";
 import Logo from "../../assets/images/site-logo.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
-<<<<<<< HEAD
-import heroBtn from "../../assets/images/menu.svg";
-import heroCloseBtn from "../../assets/images/close-btn.svg";
-import {Link} from "react-router-dom"
-=======
-import CloseModal from "../../assets/images/close.svg";
 
->>>>>>> a79b3738e3a2bb1b211ea122a7838ae8188f3875
 const Header = () => {
-  const [modal, setModal] = useState(false);
-
-  const modalOpen = () => {
-    setModal(!modal);
-  };
-
-  const modalClose = () => {
-    setModal(modal);
-  };
-
-
-  
   return (
     <div className="bg">
-      <div className="m">
-        <div className="modal-box">
-          <div className="modal">
-            <div className="modal-close-btn">
-              <button onClick={modalClose} type="button">
-                <img className="modal-close" src={CloseModal} alt="" />
-              </button>
-            </div>
-            <div className="modal-wrapper">
-              <div className="modal-top">
-                <p className="modal-item">Kursga yozilish</p>
-              </div>
-              <h3 className="modal-title">Foundation</h3>
-              <h4 className="modal-text">DASTURLASH KURSI</h4>
-              <div className="modal-input-group">
-                <div className="modal-ib">
-                  <input
-                    type="text"
-                    className="modal-int"
-                    placeholder="Ism Familya"
-                  />
-                  <input
-                    type="text"
-                    className="modal-int"
-                    placeholder="Ism Familya"
-                  />
-                </div>
-                <a href="#" className="modal-link">
-                  kursga yozilaman
-                </a>
-              </div>
-              <div className="modal-bottom">
-                <label htmlFor="modal-id">
-                  <input
-                    type="checkbox"
-                    className="modal-check"
-                    id="modal-id"
-                  />
-                  Shaxsiy ma'lumotlarimni qayta ishlashga roziman
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <header className="header">
         <div className="container">
           <nav className="nav">
-            <Link to="/about" >
-              About
-            </Link>
             <a href="#" className="header__logo">
               <img src={Logo} alt="logo" />
             </a>
@@ -123,8 +55,7 @@ const Header = () => {
             <div className="hero__btns">
               <button
                 type="button"
-                onClick={modalOpen}
-                className={`hero__btn ${modal ? "open" : ""}`}
+                className={`hero__btn}`}
               >
                 kursga yozilish
               </button>
