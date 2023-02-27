@@ -15,13 +15,13 @@ const Courses = () => {
             </span>
             <ul className="courses-list">
               <li className="courses-item">
-                <img src={Check} alt="" />
+                <img className="courses-icons" src={Check} alt="" />
                 <div className="df">
                   <h3 className="courses-list-text">48 dars</h3>
                 </div>
               </li>
               <li className="courses-item">
-                <img src={Check} alt="" />
+                <img className="courses-icons" src={Check} alt="" />
                 <div className="df">
                   <h3 className="courses-list-text">Atmosfera</h3>
                   <p className="courses-list-title">
@@ -30,7 +30,7 @@ const Courses = () => {
                 </div>
               </li>
               <li className="courses-item">
-                <img src={Check} alt="" />
+                <img className="courses-icons" src={Check} alt="" />
                 <div className="df">
                   <h3 className="courses-list-text">Platforma</h3>
                   <p className="courses-list-title">
@@ -40,9 +40,9 @@ const Courses = () => {
               </li>
             </ul>
             <div>
-              <div className="lessons__main">
+              <div className="lessons__mains">
                 <div className="lessons__main-link">
-                  <a className="lessons__main-btn" href="#">
+                  <a className="lessons__main-btn" href="#tarif">
                     Kurs afzalliklari
                   </a>
                 </div>

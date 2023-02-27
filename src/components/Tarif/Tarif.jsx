@@ -9,7 +9,7 @@ const Tarif = () => {
   const [isBlack, setIsBlack] = useState(false);
 
   return (
-    <div className="tarif">
+    <div className="tarif" id="tarif">
       <div className="container">
         <div className="tarif-wrap">
           <div className="tarif-text-box">
@@ -124,7 +124,7 @@ const Tarif = () => {
                     </button>
                   </div>
                 </div>
-                
+
                 {isGreen && (
                   <div className="">
                     <div className="open-box">

@@ -12,10 +12,10 @@ import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
 
-
 function App() {
   return (
     <div className="app">
+
 
 
       <Header />
@@ -24,6 +24,7 @@ function App() {
       <Tarif />
       <Info />
       <Footer />
+
       <Header />
       <CourseAbout />
       <WhoDevelopers />
@@ -31,6 +32,7 @@ function App() {
       <Courses />
       <Learn />
       <Result />
+      <Students />
       <Tarif />
       <Info />
       <Footer />

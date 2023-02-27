@@ -6,6 +6,7 @@ import third from "../../assets/images/03.svg";
 import fourth from "../../assets/images/04.svg";
 import fifth from "../../assets/images/05.svg";
 import sixth from "../../assets/images/06.svg";
+import heroRight from "../../assets/images/hero__arrow.svg";
 
 const Students = () => {
   return (
@@ -22,46 +23,52 @@ const Students = () => {
               </p>
             </div>
             <ul className="st-num-list">
-              <li className="st-num-item">
-                <img className="st-num-img" src={first} alt="" />
-                <strong className="st-num-title">Tushuncha</strong>
-                <p className="st-num-text">
-                  IT sohasida to’liq tushunchaga ega bo’lish
-                </p>
-              </li>
-              <li className="st-num-item">
-                <img className="st-num-img" src={second} alt="" />
-                <strong className="st-num-title">Instrumenlar</strong>
-                <p className="st-num-text">
-                  it mutaxassisi uchun kerakli barcha instrumentlarga ega
-                  bo’lishlik
-                </p>
-              </li>
-              <li className="st-num-item">
-                <img className="st-num-img" src={third} alt="" />
-                <strong className="st-num-title">Darajaning yuksalishi</strong>
-                <p className="st-num-text">
-                  it mutaxassislikning ilk asosiy darajasiga chiqish imkoni
-                </p>
-              </li>
-              <li className="st-num-item">
-                <img className="st-num-img" src={fourth} alt="" />
-                <strong className="st-num-title">WEB SITE</strong>
-                <p className="st-num-text">veb sayt yaratish imkoni</p>
-              </li>
-              <li className="st-num-item">
-                <img className="st-num-img" src={fifth} alt="" />
-                <strong className="st-num-title">Telegram BOT</strong>
-                <p className="st-num-text">Telegram BOT yaratish imkoni</p>
-              </li>
-              <li className="st-num-item">
-                <img className="st-num-img" src={sixth} alt="" />
-                <strong className="st-num-title">Stajor sifatida</strong>
-                <p className="st-num-text">
-                  Matrix IT Academy kompaniyasida Stajor sifatida faoliyat
-                  yurutish imkoni
-                </p>
-              </li>
+              <div className="disf">
+                <li className="st-num-item">
+                  <img className="st-num-img" src={first} alt="" />
+                  <strong className="st-num-title">Tushuncha</strong>
+                  <p className="st-num-text">
+                    IT sohasida to’liq tushunchaga ega bo’lish
+                  </p>
+                </li>
+                <li className="st-num-item">
+                  <img className="st-num-img" src={second} alt="" />
+                  <strong className="st-num-title">Instrumenlar</strong>
+                  <p className="st-num-text">
+                    it mutaxassisi uchun kerakli barcha instrumentlarga ega
+                    bo’lishlik
+                  </p>
+                </li>
+                <li className="st-num-item">
+                  <img className="st-num-img" src={third} alt="" />
+                  <strong className="st-num-title">
+                    Darajaning yuksalishi
+                  </strong>
+                  <p className="st-num-text">
+                    it mutaxassislikning ilk asosiy darajasiga chiqish imkoni
+                  </p>
+                </li>
+              </div>
+              <div className="disf">
+                <li className="st-num-item">
+                  <img className="st-num-img" src={fourth} alt="" />
+                  <strong className="st-num-title">WEB SITE</strong>
+                  <p className="st-num-text">veb sayt yaratish imkoni</p>
+                </li>
+                <li className="st-num-item">
+                  <img className="st-num-img" src={fifth} alt="" />
+                  <strong className="st-num-title">Telegram BOT</strong>
+                  <p className="st-num-text">Telegram BOT yaratish imkoni</p>
+                </li>
+                <li className="st-num-item">
+                  <img className="st-num-img" src={sixth} alt="" />
+                  <strong className="st-num-title">Stajor sifatida</strong>
+                  <p className="st-num-text">
+                    Matrix IT Academy kompaniyasida Stajor sifatida faoliyat
+                    yurutish imkoni
+                  </p>
+                </li>
+              </div>
             </ul>
           </div>
           <div className="student-bottom-wrap">
@@ -182,6 +189,10 @@ const Students = () => {
                 </p>
               </li>
             </ul>
+          </div>
+          <div className="whodevelopers-btn">
+            <a href="#">darxol kursga yozilaman</a>
+            <img src={heroRight} alt=". . . . " />
           </div>
         </div>
       </div>
