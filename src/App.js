@@ -11,15 +11,10 @@ import Courses from "./components/Courses/Courses";
 import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
-import { Route, Routes } from "react-router-dom";
-      
 
 function App() {
   return (
     <div className="app">
-
-    
-
       <Header />
       <CourseAbout />
       <WhoDevelopers />
@@ -31,8 +26,7 @@ function App() {
       <Tarif />
       <Info />
       <Footer />
-      <IdleTimerContainer>
-    </IdleTimerContainer>
+      <IdleTimerContainer></IdleTimerContainer>
     </div>
   );
 }
