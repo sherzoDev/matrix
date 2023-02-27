@@ -55,7 +55,7 @@ const Header = () => {
             <div className="hero__btns">
               <button
                 type="button"
-                className={`hero__btn}`}
+                className={`hero__btn`}
               >
                 kursga yozilish
               </button>
