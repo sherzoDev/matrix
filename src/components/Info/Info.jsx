@@ -1,9 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Info.scss";
 import close from "../../assets/images/close.svg";
+import CloseModal from "../../assets/images/close.svg";
 
 const Info = () => {
-  
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <div className="info">
       <div className="container">
@@ -11,7 +16,43 @@ const Info = () => {
         <h2 className="info-title">Ko’p beriladigan savollar</h2>
           <div className="info-text-box">
             <p className="info-text">Savollaringiz qoldimi?</p>
-            <button className="info-btn">Savol bermoq</button>
+            <button onClick={toggleModal} className="info-btn">Savol bermoq</button>
+            {showModal && (
+                <div className="modal-box">
+         <div className="modal">
+         <div className="modal-top">
+           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+             <img src={CloseModal} alt="Downloading . . ." />
+           </button>
+         </div>
+        
+         <h4 className="modal-title-new">SAVOLINGIZNI QOLDIRING</h4>
+         <p className="modal-desc-new">TEZ ORADA SIZ BILAN BOG’LANIB
+KOSULTATSIYA BERILADI!</p>
+         <form className="modal-form">
+          <textarea className="modal-txarea">
+          </textarea>
+           <input
+             type="text"
+             placeholder="Ism Familiya"
+             className="modal-int"
+           />
+           <input
+             type="text"
+             placeholder="Telefon raqam"
+             className="modal-int"
+           />
+           <button className="modal-btn">savolni yuborish</button>
+         </form>
+         <label htmlFor="mo-id" className="modal-b">
+           <input id="mo-id" type="checkbox" />
+           <p className="modal-bottom">
+             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+           </p>
+         </label>
+       </div>
+                </div>
+      )}
           </div>
           <ul className="info-list">
             <li className="info-item">

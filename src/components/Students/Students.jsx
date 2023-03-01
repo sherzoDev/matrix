@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Students.scss";
 import first from "../../assets/images/01.svg";
 import second from "../../assets/images/02.svg";
@@ -7,8 +7,14 @@ import fourth from "../../assets/images/04.svg";
 import fifth from "../../assets/images/05.svg";
 import sixth from "../../assets/images/06.svg";
 import heroRight from "../../assets/images/hero__arrow.svg";
+import CloseModal from "../../assets/images/close.svg";
 
 const Students = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <div className="student">
       <div className="container">
@@ -191,8 +197,41 @@ const Students = () => {
             </ul>
           </div>
           <div className="whodevelopers-btn">
-            <a href="#">darxol kursga yozilaman</a>
+            <a href="#ds" onClick={toggleModal}>darxol kursga yozilaman</a>
             <img src={heroRight} alt=". . . . " />
+            {showModal && (
+                <div className="modal-box">
+         <div className="modal">
+         <div className="modal-top">
+           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+             <img src={CloseModal} alt="Downloading . . ." />
+           </button>
+         </div>
+         <h3 className="modal-mid">Kursga yozilish</h3>
+         <h3 className="modal-title">Foundation</h3>
+         <p className="modal-desc">DASTURLASH KURSI</p>
+         <form className="modal-form">
+           <input
+             type="text"
+             placeholder="Ism Familiya"
+             className="modal-int"
+           />
+           <input
+             type="text"
+             placeholder="Telefon raqam"
+             className="modal-int"
+           />
+           <button className="modal-btn">kursga yozilaman</button>
+         </form>
+         <label htmlFor="mo-id" className="modal-b">
+           <input id="mo-id" type="checkbox" />
+           <p className="modal-bottom">
+             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+           </p>
+         </label>
+       </div>
+                </div>
+      )}
           </div>
         </div>
       </div>

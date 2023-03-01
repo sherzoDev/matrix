@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Tarif.scss";
+import CloseModal from "../../assets/images/close.svg";
 
 const Tarif = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,12 @@ const Tarif = () => {
   const [isGreen, setIsGreen] = useState(false);
 
   const [isBlack, setIsBlack] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <div className="tarif" id="tarif">
@@ -58,7 +65,8 @@ const Tarif = () => {
                     <span className="card-cost">so'm</span>
                   </div>
                   <div className="card-btn-wrap">
-                    <p className="card-text">Asl narx 1 200 000 so’m</p>
+                    <p className="card-text">Asl narx 
+                   <del>1 200 000 so’m</del></p>
                     <button
                       className="card-open-btn"
                       onClick={() => setIsOpen(!isOpen)}
@@ -93,9 +101,42 @@ const Tarif = () => {
                       <p>
                         Joy qoldi: <span>300</span>dan <span>75</span>
                       </p>
-                      <button className="card-info-btn">
+                      <button onClick={toggleModal} className="card-info-btn">
                         kursga yozilaman
                       </button>
+                      {showModal && (
+                <div className="modal-box">
+         <div className="modal">
+         <div className="modal-top">
+           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+             <img src={CloseModal} alt="Downloading . . ." />
+           </button>
+         </div>
+         <h3 className="modal-mid">Kursga yozilish</h3>
+         <h3 className="modal-title">Foundation</h3>
+         <p className="modal-desc">DASTURLASH KURSI</p>
+         <form className="modal-form">
+           <input
+             type="text"
+             placeholder="Ism Familiya"
+             className="modal-int"
+           />
+           <input
+             type="text"
+             placeholder="Telefon raqam"
+             className="modal-int"
+           />
+           <button className="modal-btn">kursga yozilaman</button>
+         </form>
+         <label htmlFor="mo-id" className="modal-b">
+           <input id="mo-id" type="checkbox" />
+           <p className="modal-bottom">
+             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+           </p>
+         </label>
+       </div>
+                </div>
+      )}
                     </div>
                   </div>
                 )}
@@ -162,9 +203,42 @@ const Tarif = () => {
                       <p>
                         Joy qoldi: <span>200</span>dan <span>35</span>
                       </p>
-                      <button className="card-info-btn">
+                      <button onClick={toggleModal} className="card-info-btn">
                         kursga yozilaman
                       </button>
+                      {showModal && (
+                <div className="modal-box">
+         <div className="modal">
+         <div className="modal-top">
+           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+             <img src={CloseModal} alt="Downloading . . ." />
+           </button>
+         </div>
+         <h3 className="modal-mid">Kursga yozilish</h3>
+         <h3 className="modal-title">Foundation</h3>
+         <p className="modal-desc">DASTURLASH KURSI</p>
+         <form className="modal-form">
+           <input
+             type="text"
+             placeholder="Ism Familiya"
+             className="modal-int"
+           />
+           <input
+             type="text"
+             placeholder="Telefon raqam"
+             className="modal-int"
+           />
+           <button className="modal-btn">kursga yozilaman</button>
+         </form>
+         <label htmlFor="mo-id" className="modal-b">
+           <input id="mo-id" type="checkbox" />
+           <p className="modal-bottom">
+             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+           </p>
+         </label>
+       </div>
+                </div>
+      )}
                     </div>
                   </div>
                 )}
@@ -249,9 +323,42 @@ const Tarif = () => {
                       <p>
                         Joy qoldi: <span>300</span>dan <span>75</span>
                       </p>
-                      <button className="card-info-btn">
+                      <button onClick={toggleModal} className="card-info-btn">
                         kursga yozilaman
                       </button>
+                      {showModal && (
+                <div className="modal-box">
+         <div className="modal">
+         <div className="modal-top">
+           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+             <img src={CloseModal} alt="Downloading . . ." />
+           </button>
+         </div>
+         <h3 className="modal-mid">Kursga yozilish</h3>
+         <h3 className="modal-title">Foundation</h3>
+         <p className="modal-desc">DASTURLASH KURSI</p>
+         <form className="modal-form">
+           <input
+             type="text"
+             placeholder="Ism Familiya"
+             className="modal-int"
+           />
+           <input
+             type="text"
+             placeholder="Telefon raqam"
+             className="modal-int"
+           />
+           <button className="modal-btn">kursga yozilaman</button>
+         </form>
+         <label htmlFor="mo-id" className="modal-b">
+           <input id="mo-id" type="checkbox" />
+           <p className="modal-bottom">
+             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+           </p>
+         </label>
+       </div>
+                </div>
+      )}
                     </div>
                   </div>
                 )}
