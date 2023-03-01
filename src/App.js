@@ -26,7 +26,7 @@ function App() {
       <Tarif />
       <Info />
       <Footer />
-      <IdleTimerContainer></IdleTimerContainer>
+      {/* <IdleTimerContainer></IdleTimerContainer> */}
     </div>
   );
 }
