@@ -58,7 +58,8 @@ const Tarif = () => {
                     <span className="card-cost">so'm</span>
                   </div>
                   <div className="card-btn-wrap">
-                    <p className="card-text">Asl narx 1 200 000 so’m</p>
+                    <p className="card-text">Asl narx 
+                   <del>1 200 000 so’m</del></p>
                     <button
                       className="card-open-btn"
                       onClick={() => setIsOpen(!isOpen)}

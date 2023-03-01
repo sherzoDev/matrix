@@ -16,9 +16,10 @@ export const IdleTimerContainer = () => {
       >
         <ReactModal
           onAfterClose={() => setModal(false)}
-          bodyOpenClassName="overflow"
+        //   bodyOpenClassName="overflow"
           style={{
             content: {
+                marginTop:"80px",
               top: "50%",
               left: "50%",
               right: "auto",
@@ -38,8 +39,8 @@ export const IdleTimerContainer = () => {
               </button>
             </div>
             <h3 className="modal-mid">Kursga yozilish</h3>
-            <h3 className="modal-title">Foundation</h3>
-            <p className="modal-desc">DASTURLASH KURSI</p>
+            <h3 className="modal-title">MAXSUS TAKLIF</h3>
+            <p className="modal-desc">KURSGA YOZILING VA <span className="modal-green">15% </span>CHEGIRMAGA <br /> EGA BO’LING!</p>
             <form className="modal-form">
               <input
                 type="text"
