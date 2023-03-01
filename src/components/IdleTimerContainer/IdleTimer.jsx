@@ -10,7 +10,7 @@ export const IdleTimerContainer = () => {
   return (
     <div>
       <IdleTimer
-        timeout={5000}
+        timeout={10000}
         onIdle={() => setModal(true)}
         ref={idleTimerRef}
       >
