@@ -3,7 +3,7 @@
 }
 
 .modal-box{
-    padding-top: 200px;
+    padding-top: 20px;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -20,13 +20,14 @@
 
 }
 .modal {
+
     background-color:#fff;
     max-width: 540px;
   width: 100%;
-  height: 621px;
+  height: auto;
   padding: 0 58px;
   padding-top: 0px;
-  padding-bottom: 68px;
+  padding-bottom: 18px;
   border-radius:15px;
 }
 
@@ -42,6 +43,7 @@
 }
 
 .modal-top-btn {
+  margin-top: 20px;
   background-color: transparent;
   border: none;
 }
@@ -55,10 +57,10 @@
 
 .modal-title {
   margin-bottom: 0;
-  margin-top: 49px;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 61px;
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 37px;
+  line-height: 47px;
   text-align: center;
   background: linear-gradient(91.44deg, #00DB65 0.54%, #007A38 99.51%);
   -webkit-background-clip: text;
@@ -82,12 +84,12 @@ text-fill-color: transparent;
 
 .modal-desc {
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 15px;
   text-align: center;
   color: #000000;
   margin-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 15px;
 }
 .modal-desc-new{
     font-weight: 500;
@@ -129,7 +131,7 @@ text-fill-color: transparent;
 }
 .modal-txarea{
     margin-bottom: 34px;
-    padding:50px 100px;
+    padding:25px 45px;
     border: 1px solid #000000;
 border-radius: 34px;
 }
@@ -143,7 +145,7 @@ border-radius: 34px;
   background: linear-gradient(92.2deg, #00DB65 0%, #007A38 100%);
   border-radius: 34px;
   border: none;
-  margin-bottom: 56px;
+  margin-bottom: 16px;
 }
 
 .modal-b {
@@ -162,3 +164,66 @@ border-radius: 34px;
 #mo-id {
   margin-right: 15px;
 }
+.success-title{
+  margin: 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 42px;
+  text-align: center;
+  background: linear-gradient(91.44deg, #00DB65 0.54%, #007A38 99.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.success-text{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 700px){
+  .modal{
+    padding-bottom: 68px;
+  }
+  .modal-box{
+    padding-top: 200px;
+  }
+.modal-title{
+  margin-top: 49px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+}
+.modal-desc{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 48px;
+}
+.modal-btn{
+  padding: 16px 58px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 54px;
+}
+.modal-txarea{
+  padding:50px 100px;
+}
+.success-title{
+  margin-top: 49px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+}
+.success-text{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 48px;
+}
+}
+

@@ -7,10 +7,17 @@ import CloseModal from "../../assets/images/close.svg";
 export const IdleTimerContainer = () => {
   const idleTimerRef = useRef();
   const [modal, setModal] = useState(false);
+  const handleSubmit = () => {
+    console.log("jbjb");
+  }
   return (
     <div>
       <IdleTimer
+<<<<<<< HEAD
         timeout={5000}
+=======
+        // timeout={10000}
+>>>>>>> 8cea4e69c2b2968549f2fa887c732c3310170690
         onIdle={() => setModal(true)}
         ref={idleTimerRef}
       >
@@ -41,7 +48,9 @@ export const IdleTimerContainer = () => {
             <h3 className="modal-mid">Kursga yozilish</h3>
             <h3 className="modal-title">MAXSUS TAKLIF</h3>
             <p className="modal-desc">KURSGA YOZILING VA <span className="modal-green">15% </span>CHEGIRMAGA <br /> EGA BO’LING!</p>
-            <form className="modal-form">
+            <form onSubmit={()=>
+             handleSubmit()
+            } className="modal-form">
               <input
                 type="text"
                 placeholder="Ism Familiya"

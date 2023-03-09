@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import "./Tarif.scss";
 import CloseModal from "../../assets/images/close.svg";
+import { Modal } from "../Modal/Modal";
+import axios from "axios";
 
 const Tarif = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +13,33 @@ const Tarif = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const nameRef  = useRef();
+  const phoneNumRef  = useRef();
+
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+  
+  const [success, setsuccessModal] = useState(false);
+
+
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    console.log(phoneNumRef);
+
+    axios.post( 'http://167.71.9.83:8080/v1/applications',
+   {
+        "fullName": `${nameRef.current.value}`,
+        "phoneNumber": `${phoneNumRef.current.value}`
+      }
+  ).then(data => {
+    console.log(data.status);
+    // if (data.status === 201) {
+      setsuccessModal(true)
+    // }
+  })
+  }
 
   return (
     <div className="tarif" id="tarif">
@@ -105,38 +131,55 @@ const Tarif = () => {
                         kursga yozilaman
                       </button>
                       {showModal && (
-                <div className="modal-box">
-         <div className="modal">
-         <div className="modal-top">
-           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
-             <img src={CloseModal} alt="Downloading . . ." />
-           </button>
-         </div>
-         <h3 className="modal-mid">Kursga yozilish</h3>
-         <h3 className="modal-title">Foundation</h3>
-         <p className="modal-desc">DASTURLASH KURSI</p>
-         <form className="modal-form">
-           <input
-             type="text"
-             placeholder="Ism Familiya"
-             className="modal-int"
-           />
-           <input
-             type="text"
-             placeholder="Telefon raqam"
-             className="modal-int"
-           />
-           <button className="modal-btn">kursga yozilaman</button>
-         </form>
-         <label htmlFor="mo-id" className="modal-b">
-           <input id="mo-id" type="checkbox" />
-           <p className="modal-bottom">
-             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
-           </p>
-         </label>
-       </div>
-                </div>
-      )}
+               <Modal>
+                    <div className="modal-box">
+                      <div className="modal">
+                            <div className="modal-top">
+                              <button className="modal-top-btn" onClick={() => {
+                                setShowModal(false)
+                                setsuccessModal(false)
+                              }}>
+                                <img src={CloseModal} alt="Downloading . . ." />
+                              </button>
+                            </div>
+                        {success ? <div>
+                          <div>
+                            <h3 className="success-title">TABRIKLAYMIZ</h3>
+                            <p className="success-text">SIZ FORMANI MUVAFFAQIYATLI <br /> TO’LDIRDINGIZ</p>
+                          </div>
+                        </div> :
+                          <>
+                            <h3 className="modal-mid">Kursga yozilish</h3>
+                            <h3 className="modal-title">Foundation</h3>
+                            <p className="modal-desc">DASTURLASH KURSI</p>
+                            <form className="modal-form" onSubmit={(evt) => handleSubmit(evt)}>
+                              <input
+                                ref={nameRef}
+                                type="text"
+                                placeholder="Ism Familiya"
+                                className="modal-int"
+                              />
+                              <input
+                                ref={phoneNumRef}
+                                type="text"
+                                placeholder="Telefon raqam"
+                                className="modal-int"
+                              />
+                              <button className="modal-btn">kursga yozilaman</button>
+                            </form>
+                            <label htmlFor="mo-id" className="modal-b">
+                              <input id="mo-id" type="checkbox" />
+                              <p className="modal-bottom">
+                                Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+                              </p>
+                            </label>
+                          </> 
+                        }
+                      </div>
+                    </div>
+                </Modal>
+       
+               )}
                     </div>
                   </div>
                 )}
@@ -207,38 +250,52 @@ const Tarif = () => {
                         kursga yozilaman
                       </button>
                       {showModal && (
-                <div className="modal-box">
-         <div className="modal">
-         <div className="modal-top">
-           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
-             <img src={CloseModal} alt="Downloading . . ." />
-           </button>
-         </div>
-         <h3 className="modal-mid">Kursga yozilish</h3>
-         <h3 className="modal-title">Foundation</h3>
-         <p className="modal-desc">DASTURLASH KURSI</p>
-         <form className="modal-form">
-           <input
-             type="text"
-             placeholder="Ism Familiya"
-             className="modal-int"
-           />
-           <input
-             type="text"
-             placeholder="Telefon raqam"
-             className="modal-int"
-           />
-           <button className="modal-btn">kursga yozilaman</button>
-         </form>
-         <label htmlFor="mo-id" className="modal-b">
-           <input id="mo-id" type="checkbox" />
-           <p className="modal-bottom">
-             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
-           </p>
-         </label>
-       </div>
-                </div>
-      )}
+               <Modal>
+                    <div className="modal-box">
+                      <div className="modal">
+                            <div className="modal-top">
+                              <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+                                <img src={CloseModal} alt="Downloading . . ." />
+                              </button>
+                            </div>
+                        {success ? <div>
+                          <div>
+                            <h3 className="success-title">TABRIKLAYMIZ</h3>
+                            <p className="success-text">SIZ FORMANI MUVAFFAQIYATLI <br /> TO’LDIRDINGIZ</p>
+                          </div>
+                        </div> :
+                          <>
+                            <h3 className="modal-mid">Kursga yozilish</h3>
+                            <h3 className="modal-title">Foundation</h3>
+                            <p className="modal-desc">DASTURLASH KURSI</p>
+                            <form className="modal-form" onSubmit={(evt) => handleSubmit(evt)}>
+                              <input
+                                ref={nameRef}
+                                type="text"
+                                placeholder="Ism Familiya"
+                                className="modal-int"
+                              />
+                              <input
+                                ref={phoneNumRef}
+                                type="text"
+                                placeholder="Telefon raqam"
+                                className="modal-int"
+                              />
+                              <button className="modal-btn">kursga yozilaman</button>
+                            </form>
+                            <label htmlFor="mo-id" className="modal-b">
+                              <input id="mo-id" type="checkbox" />
+                              <p className="modal-bottom">
+                                Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+                              </p>
+                            </label>
+                          </> 
+                        }
+                      </div>
+                    </div>
+                </Modal>
+       
+               )}
                     </div>
                   </div>
                 )}
@@ -327,38 +384,52 @@ const Tarif = () => {
                         kursga yozilaman
                       </button>
                       {showModal && (
-                <div className="modal-box">
-         <div className="modal">
-         <div className="modal-top">
-           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
-             <img src={CloseModal} alt="Downloading . . ." />
-           </button>
-         </div>
-         <h3 className="modal-mid">Kursga yozilish</h3>
-         <h3 className="modal-title">Foundation</h3>
-         <p className="modal-desc">DASTURLASH KURSI</p>
-         <form className="modal-form">
-           <input
-             type="text"
-             placeholder="Ism Familiya"
-             className="modal-int"
-           />
-           <input
-             type="text"
-             placeholder="Telefon raqam"
-             className="modal-int"
-           />
-           <button className="modal-btn">kursga yozilaman</button>
-         </form>
-         <label htmlFor="mo-id" className="modal-b">
-           <input id="mo-id" type="checkbox" />
-           <p className="modal-bottom">
-             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
-           </p>
-         </label>
-       </div>
-                </div>
-      )}
+               <Modal>
+                    <div className="modal-box">
+                      <div className="modal">
+                            <div className="modal-top">
+                              <button className="modal-top-btn" onClick={() => setShowModal(false)}>
+                                <img src={CloseModal} alt="Downloading . . ." />
+                              </button>
+                            </div>
+                        {success ? <div>
+                          <div>
+                            <h3 className="success-title">TABRIKLAYMIZ</h3>
+                            <p className="success-text">SIZ FORMANI MUVAFFAQIYATLI <br /> TO’LDIRDINGIZ</p>
+                          </div>
+                        </div> :
+                          <>
+                            <h3 className="modal-mid">Kursga yozilish</h3>
+                            <h3 className="modal-title">Foundation</h3>
+                            <p className="modal-desc">DASTURLASH KURSI</p>
+                            <form className="modal-form" onSubmit={(evt) => handleSubmit(evt)}>
+                              <input
+                                ref={nameRef}
+                                type="text"
+                                placeholder="Ism Familiya"
+                                className="modal-int"
+                              />
+                              <input
+                                ref={phoneNumRef}
+                                type="text"
+                                placeholder="Telefon raqam"
+                                className="modal-int"
+                              />
+                              <button className="modal-btn">kursga yozilaman</button>
+                            </form>
+                            <label htmlFor="mo-id" className="modal-b">
+                              <input id="mo-id" type="checkbox" />
+                              <p className="modal-bottom">
+                                Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+                              </p>
+                            </label>
+                          </> 
+                        }
+                      </div>
+                    </div>
+                </Modal>
+       
+               )}
                     </div>
                   </div>
                 )}
