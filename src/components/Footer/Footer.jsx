@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import "./Footer.scss";
 import ftLogo from "../../assets/images/footer-logo.svg";
 import youtube from "../../assets/images/youtube.svg";
@@ -6,27 +6,46 @@ import telegram from "../../assets/images/telegram.svg";
 import facebook from "../../assets/images/facebook.svg";
 import instagram from "../../assets/images/instagram.svg";
 import apis from "../../assets/images/apislogos.png";
+import axios from "axios";
+
 
 const Footer = () => {
+  const nameRef  = useRef();
+  const phoneNumRef  = useRef();
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    console.log(phoneNumRef);
+
+    axios.post( 'http://167.71.9.83:8080/v1/applications',
+   {
+        "fullName": `${nameRef.current.value}`,
+        "phoneNumber": `${phoneNumRef.current.value}`
+      }
+  ).then(data => {
+    console.log(data.status);
+  })
+  }
   return (
     <footer className="ft-main">
       <div className="container">
         <div className="ft-wrap">
-          <form className="ft-form" action="" method="post" autoComplete="off">
+          <form className="ft-form"  action="" method="post" autoComplete="off" onSubmit={(evt) => handleSubmit(evt)}>
             <p className="ft-text">
               Formani to’ldiring, muxaxassislardan BEPUL konsultatsiya oling va
               Chegirmaga ega bo’ling
             </p>
             <input
+              ref={nameRef}
               className="ft-first-in"
               type="text"
-              placeholder=""
+              placeholder="Ismingizni kiriting"
               aria-label="username"
             />
             <input
+              ref={phoneNumRef}
               className="ft-second-in"
               type="tel"
-              placeholder=""
+              placeholder="Telefon raqam"
               aria-label="user phone number"
             />
             <button className="ft-btn" type="submit">

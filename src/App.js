@@ -11,10 +11,24 @@ import Courses from "./components/Courses/Courses";
 import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { Admin } from "./pages/Admin/Admin";
+import { Login } from "./pages/Login/Login";
+import { Home } from "./pages/Home/Home";
+import { GlobalStyle } from "./assets/styles/Global.styles";
 
 function App() {
+  const navigate = useNavigate()
   return (
     <div className="app">
+      
+    	<Routes>
+				<Route path='/' element={<Home /> } />
+				<Route path='/login' element={<Login /> } />
+			{localStorage.getItem("token") ?  <Route path='/admin*' element={ <Admin/>} /> : ""}
+	
+			</Routes>
+      <GlobalStyle/>
       <Header />
       <CourseAbout />
       <WhoDevelopers />

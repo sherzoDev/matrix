@@ -1,14 +1,36 @@
-import React,{useState} from "react";
+import React,{useState,useRef} from "react";
 import "./Info.scss";
 import close from "../../assets/images/close.svg";
 import CloseModal from "../../assets/images/close.svg";
+import { Modal } from "../Modal/Modal";
+import axios from "axios";
 
 const Info = () => {
   const [showModal, setShowModal] = useState(false);
+  const [success, setsuccessModal] = useState(false);
+const nameRef  = useRef();
+const phoneNumRef  = useRef();
+const questionRef = useRef();
 
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    console.log(nameRef.current.value);
+
+    axios.post('http://167.71.9.83:8080/v1/questions',
+   {
+        "fullName": `${nameRef.current.value}`,
+        "phoneNumber": `${phoneNumRef.current.value}`,
+        "text": `${questionRef.current.value}`
+      }
+  ).then(data => {
+    console.log(data.status);
+      setsuccessModal(true)
+    
+  })
+  }
   return (
     <div className="info">
       <div className="container">
@@ -18,40 +40,55 @@ const Info = () => {
             <p className="info-text">Savollaringiz qoldimi?</p>
             <button onClick={toggleModal} className="info-btn">Savol bermoq</button>
             {showModal && (
+              <Modal>
                 <div className="modal-box">
-         <div className="modal">
-         <div className="modal-top">
-           <button className="modal-top-btn" onClick={() => setShowModal(false)}>
-             <img src={CloseModal} alt="Downloading . . ." />
-           </button>
-         </div>
-        
-         <h4 className="modal-title-new">SAVOLINGIZNI QOLDIRING</h4>
-         <p className="modal-desc-new">TEZ ORADA SIZ BILAN BOG’LANIB
-KOSULTATSIYA BERILADI!</p>
-         <form className="modal-form">
-          <textarea className="modal-txarea">
-          </textarea>
-           <input
-             type="text"
-             placeholder="Ism Familiya"
-             className="modal-int"
-           />
-           <input
-             type="text"
-             placeholder="Telefon raqam"
-             className="modal-int"
-           />
-           <button className="modal-btn">savolni yuborish</button>
-         </form>
-         <label htmlFor="mo-id" className="modal-b">
-           <input id="mo-id" type="checkbox" />
-           <p className="modal-bottom">
-             Shaxsiy ma'lumotlarimni qayta ishlashga roziman
-           </p>
-         </label>
-       </div>
-                </div>
+                      <div className="modal">
+                            <div className="modal-top">
+                              <button className="modal-top-btn" onClick={() => {
+                                setShowModal(false)
+                                setsuccessModal(false)
+                              }}>
+                                <img src={CloseModal} alt="Downloading . . ." />
+                              </button>
+                            </div>
+                        {success ? <div>
+                          <div>
+                            <h3 className="success-title">TABRIKLAYMIZ</h3>
+                            <p className="success-text">SIZ SAVOLNI MUVAFFAQIYATLI <br /> YUBORDINGIZ</p>
+                          </div>
+                        </div> :
+                          <>
+                            <h3 className="modal-mid">Kursga yozilish</h3>
+                            <h3 className="modal-title">Foundation</h3>
+                            <p className="modal-desc">DASTURLASH KURSI</p>
+                            <form className="modal-form" onSubmit={(evt) => handleSubmit(evt)}>
+                            <textarea ref={questionRef} className="modal-txarea">
+                            </textarea>
+                              <input
+                                ref={nameRef}
+                                type="text"
+                                placeholder="Ism Familiya"
+                                className="modal-int"
+                              />
+                              <input
+                                ref={phoneNumRef}
+                                type="text"
+                                placeholder="Telefon raqam"
+                                className="modal-int"
+                              />
+                              <button className="modal-btn">kursga yozilaman</button>
+                            </form>
+                            <label htmlFor="mo-id" className="modal-b">
+                              <input id="mo-id" type="checkbox" />
+                              <p className="modal-bottom">
+                                Shaxsiy ma'lumotlarimni qayta ishlashga roziman
+                              </p>
+                            </label>
+                          </> 
+                        }
+                      </div>
+                    </div>
+                </Modal>
       )}
           </div>
           <ul className="info-list">
