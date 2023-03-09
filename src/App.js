@@ -11,10 +11,12 @@ import Courses from "./components/Courses/Courses";
 import Learn from "./components/Learn/Learn";
 import Result from "./components/Result/Result";
 import { IdleTimerContainer } from "./components/IdleTimerContainer/IdleTimer";
+import Admin from "./pages/Admin/Admin";
 
 function App() {
   return (
     <div className="app">
+      <Admin />
       <Header />
       <CourseAbout />
       <WhoDevelopers />
@@ -26,7 +28,7 @@ function App() {
       <Tarif />
       <Info />
       <Footer />
-      {/* <IdleTimerContainer></IdleTimerContainer> */}
+      <IdleTimerContainer></IdleTimerContainer>
     </div>
   );
 }

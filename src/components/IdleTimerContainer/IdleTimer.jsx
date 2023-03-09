@@ -10,13 +10,13 @@ export const IdleTimerContainer = () => {
   return (
     <div>
       <IdleTimer
-        timeout={10000}
+        timeout={5000}
         onIdle={() => setModal(true)}
         ref={idleTimerRef}
       >
         <ReactModal
           onAfterClose={() => setModal(false)}
-        //   bodyOpenClassName="overflow"
+          bodyOpenClassName="overflow"
           style={{
             content: {
                 marginTop:"80px",
