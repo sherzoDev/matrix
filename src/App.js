@@ -28,19 +28,8 @@ function App() {
 			{localStorage.getItem("token") ?  <Route path='/admin*' element={ <Admin/>} /> : ""}
 	
 			</Routes>
-      <GlobalStyle/>
-      <Header />
-      <CourseAbout />
-      <WhoDevelopers />
-      <CourseInfo />
-      <Courses />
-      <Learn />
-      <Result />
-      <Students />
-      <Tarif />
-      <Info />
-      <Footer />
       {/* <IdleTimerContainer></IdleTimerContainer> */}
+	  <GlobalStyle />
     </div>
   );
 }
