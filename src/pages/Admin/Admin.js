@@ -1,4 +1,12 @@
 import React from "react";
+<<<<<<< HEAD
+
+const Admin = () => {
+  return <div className="admin"></div>;
+};
+
+export default Admin;
+=======
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Buyurtmalar } from "../../components/Buyurtmalar/Buyurtmalar";
 import { Customers } from "../../components/Сustomers/Сustomers";
@@ -50,3 +58,4 @@ export const Admin = () => {
 		</>
 	);
 };
+>>>>>>> 8cea4e69c2b2968549f2fa887c732c3310170690
