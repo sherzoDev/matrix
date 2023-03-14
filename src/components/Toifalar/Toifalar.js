@@ -78,7 +78,7 @@ useEffect(() => {
 	console.log(data);
 	setFData(data.data)
   });
-}, []);
+}, []); 
 
 	return (
 		<>
@@ -122,19 +122,25 @@ useEffect(() => {
 									component='th'
 									scope='row'
 								>
-									1
+									{element.id}
 								</TableCell>
 								<TableCell
 									sx={{ fontSize: "15px", fontWeight: "500" }}
 									align='center'
 								>
-									hello
+									{element.fullName}
 								</TableCell>
 								<TableCell
 									sx={{ fontSize: "15px", fontWeight: "500" }}
 									align='center'
 								>
-									12
+									{element.phoneNumber}
+								</TableCell>
+								<TableCell
+									sx={{ fontSize: "15px", fontWeight: "500" }}
+									align='center'
+								>
+									{element.text}
 								</TableCell>
 							</TableRow>
 							))

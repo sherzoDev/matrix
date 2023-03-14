@@ -17,7 +17,7 @@ const questionRef = useRef();
   };
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    console.log(nameRef.current.value);
+    console.log(questionRef.current.value);
 
     axios.post('http://167.71.9.83:8080/v1/questions',
    {
@@ -58,9 +58,10 @@ const questionRef = useRef();
                           </div>
                         </div> :
                           <>
-                            <h3 className="modal-mid">Kursga yozilish</h3>
-                            <h3 className="modal-title">Foundation</h3>
-                            <p className="modal-desc">DASTURLASH KURSI</p>
+                            
+                            <h3 className="modal-title-savol">SAVOLINGIZNI QOLDIRING</h3>
+                            <p className="modal-desc">TEZ ORADA SIZ BILAN BOG’LANIB <br />
+KOSULTATSIYA BERILADI!</p>
                             <form className="modal-form" onSubmit={(evt) => handleSubmit(evt)}>
                             <textarea ref={questionRef} className="modal-txarea">
                             </textarea>
